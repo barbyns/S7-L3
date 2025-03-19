@@ -24,6 +24,7 @@ function createBookCard(book) {
               <h5 class="card-title">${book.title}</h5>
               <p class="card-text">Prezzo: ${book.price}€</p>
               <button class="btn btn-danger scarta-btn">Scarta</button>
+              <button class="btn btn-success buy-btn">Buy</button>
           </div>
       </div>
   `;
@@ -35,4 +36,9 @@ function createBookCard(book) {
   col.querySelector(".scarta-btn").addEventListener("click", function () {
       col.remove(); // Rimuove la card dal DOM
   });
+
+  // Pulsante Buy
+  col.querySelector(".buy-btn").addEventListener("click", function(){
+    alert(`Hai acquistato il libro: "${book.title}" per ${book.price}€`);
+});
 }
